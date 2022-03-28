@@ -82,4 +82,32 @@ Number 2:  2
 15
 17
 19 */
+  
+  
+  
+  stdout.write("Enter the value of 'n' to calculate fibnocci series: ");
+  String? numfInStr=stdin.readLineSync();
+  int? number1=int.tryParse(numfInStr!); 
+  int numf1=0;
+  int numf2=1;
+  print(numf1);     
+  while(numf2<=number1!){ 
+      print(numf2);          
+      numf2=numf1+numf2; 
+      numf1=numf2-numf1;        
+  }  
+  /*Output
+  Enter the value of 'n' to calculate fibnocci series: 90
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89 */
 }
