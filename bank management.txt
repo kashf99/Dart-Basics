@@ -1,0 +1,69 @@
+
+
+import 'dart:io';
+
+main(){
+  int choice=0;
+  int balance=0;
+  int amount=0;
+  String? title;
+  do{
+
+  stdout.write("\nMenu\n1. For Account Creation\n2. Credit\n3. Debit\n4. Balance Check\n5. Account Details\n6. Exit ");
+  String? numInStr=stdin.readLineSync();
+  choice=int.tryParse(numInStr!) ?? 1; 
+  
+  switch(choice){
+    case 1:
+    print("\nAccount creation\nEnter Account title: ");
+    title=stdin.readLineSync()!;
+    print("Enter Balance: ");
+    numInStr=stdin.readLineSync();
+    balance=int.tryParse(numInStr!) ?? 0; 
+    print("\nCongratulations $title.");
+    print("Your account has been created. Your balance is $balance");
+    break;
+
+    case 2:
+    print("\nCredit\nEnter amount: ");
+    numInStr=stdin.readLineSync();
+    amount=int.tryParse(numInStr!) ?? 0; 
+    balance=balance+amount;
+    print("\nNew balance is $balance");
+    break;
+
+    case 3:
+    print("\nDebit\nEnter amount: ");
+    numInStr=stdin.readLineSync();
+    amount=int.tryParse(numInStr!) ?? 0; 
+    if(balance>=amount){
+      balance=balance-amount;
+      print("\nNew balance $balance\n");
+    }else{
+      print("Balance= $balance");
+      print("Low Balance");
+    }  
+    break;
+
+    case 4:
+    print("\nBalance Check");
+    print("Your Balance is $balance\n");
+    break;
+    
+    case 5: 
+    print("\nAccount Title is $title.");
+    print("Your Balance is $balance\n");
+    break;
+
+    case 6: 
+    print("Thank you for using BMS");
+    return;
+
+    default:
+    print("\nPlease select from the menu");
+  }
+
+
+  }while(choice!=6);
+  
+}
