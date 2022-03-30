@@ -1,0 +1,15 @@
+final fixedLengthList = List<int>.empty(growable: true);
+  stdout.write("Enter 5 numbers\n");
+  int sum=0;
+  double average;
+
+  for(int i=0 ; i<5 ; i++){
+    stdout.write("Number ${i+1}: ");  
+    fixedLengthList.add(int.parse(stdin.readLineSync()!)); 
+    sum=sum+fixedLengthList[i];
+  }
+
+  average=sum/5;
+  print("Sum = $sum");
+  print("Average = $average");
+  

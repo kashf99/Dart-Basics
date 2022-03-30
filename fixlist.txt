@@ -1,0 +1,43 @@
+ const monthList =<int> [31,28,31,30,31,30,31,31,30,31,30,31];
+   int total=0;
+
+   stdout.write("Enter Month Number: \n");
+   int month=int.parse(stdin.readLineSync()!); 
+   stdout.write("Enter Date: \n");
+   int date=int.parse(stdin.readLineSync()!); 
+
+   for(int i=0; i<month-1 ; i++){
+     total=total+monthList[i];
+   }
+
+   total=total+date;
+   print("Total days passed = $total");
+
+
+
+
+
+
+
+
+
+
+
+main(){
+   final monthList =<int> [31,28,31,30,31,30,31,31,30,31,30,31];
+   int total=0;
+
+   stdout.write("Enter Month Number: \n");
+   int month=int.parse(stdin.readLineSync()!); 
+   stdout.write("Enter Date: \n");
+   int date=int.parse(stdin.readLineSync()!); 
+
+   for(int i=0; i<month-1 ; i++){
+     total=total+monthList[i];
+   }
+
+   total=total+date;
+   print("Total days passed = $total");
+
+}
+
